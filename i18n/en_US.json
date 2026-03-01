@@ -1,0 +1,6 @@
+{
+    "no_images": "No images found: ",
+    "out_of_range": "No images found within the specified range.",
+    "complete": "All images processed (Total {}). Batch finished.",
+    "processing": "Processing"
+}
