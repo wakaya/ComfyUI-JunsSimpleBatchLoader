@@ -2,14 +2,15 @@
 
 *(Auto-Stop Support / 自動停止機能付き)*
 
-A lightweight batch image loader node for ComfyUI with automatic stop
-logic and full Japanese path support.
+A lightweight batch image loading node for ComfyUI that incorporates 
+a feature to simulate batch termination with “realistic-looking” error messages.
 
 Designed for safe, unattended batch workflows such as high-resolution
 upscaling with AI models.
 
 
-自動停止処理を組み込んだ、軽量な ComfyUI用バッチ画像読み込みノードです。
+「それっぽい」エラーメッセージでバッチ終了を演出する機能を組み込んだ、軽量な 
+ComfyUI用バッチ画像読み込みノードです。
 
 AIモデルを用いた連続アップスケール処理など、無人バッチ運用のために設計されています。
 
@@ -48,8 +49,9 @@ AIモデルを用いた連続アップスケール処理など、無人バッチ
 
 ## 💡 Why This Node? / なぜこのノードが必要なのか？
 
-When running large batch jobs (especially high-resolution upscaling),
-ComfyUI does not automatically stop after the final image.
+When performing batch processing, unless the queue is run with the 
+correct number of files, ComfyUI will attempt to process the next 
+file after finishing the last image and terminate with an error.
 
 This node provides:
 
@@ -59,8 +61,8 @@ This node provides:
 
 Ideal for overnight processing workflows.
 
-大規模なバッチ処理（特に高解像度アップスケール）を実行する場合、
-ComfyUIは最後の画像を処理し終えても自動的には停止しません。
+バッチ処理を実行する場合、正しいファイル数でキューを回さない限り、 
+ComfyUIは最後の画像を処理し終えた次のファイルを処理しようとしてエラー終了します。
 
 このノードは次の機能を提供します：
 
